@@ -1,0 +1,5 @@
+a = int(input("wpisz a "))
+b = int(input("wpisz b "))
+c = int(input("wpisz c "))
+wynik = max(a,b,c)
+print(f"Największa liczba to: {wynik}")
