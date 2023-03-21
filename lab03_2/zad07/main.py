@@ -2,7 +2,7 @@ def iloczyn_elementow(* liczby):
     if len(liczby) != 3:
         return -1
     elementy = [liczby[0] * pow(liczby[1],i) for i in range(liczby[2])]
-    wynik = 0
+    wynik = 1
     for element in elementy:
         wynik *= element
     return wynik
