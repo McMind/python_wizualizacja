@@ -27,9 +27,11 @@ wynik_wyrazenia = pow(math.sin(56),2) + pow(pow(4,2)/25+(math.log(85,3)),1/4)
 wynik_wyrazenia = round(wynik_wyrazenia,2)
 print(wynik_wyrazenia)
 
-def zad5(n):
+def zad5():
     try:
-        n = int(n)
+        n = int(input("podaj liczbę n: "))
+        if(n<0):
+            raise ValueError
         wynik = 0
         for i in range(1,n+1):
             wynik += i
@@ -37,10 +39,8 @@ def zad5(n):
         plik.write(str(wynik))
         plik.close()
     except ValueError:
-        print("podaj liczbę")
-    except:
-        print("error")
+        print("zła wartość wpisanego argumentu")
     else:
         print("wykonano pomyślnie")
 
-zad5(12)
+zad5()
