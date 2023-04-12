@@ -15,3 +15,16 @@ def zad3(n):
     tab = np.array([pow(2,x) for x in range(pow(n,2))])
     return tab.reshape(n,n)
 print(zad3(5))
+
+#zad4
+def generuj(pod,ile):
+    return np.logspace(1,ile,num=ile,base=pod)
+
+print(generuj(4,3))
+
+#zad5
+def zad5(dlu):
+    tab = np.arange(1,dlu+1)[::-1]
+    tab = np.diag(tab,k=2)
+    return tab
+print(zad5(4))
