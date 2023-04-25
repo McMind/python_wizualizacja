@@ -28,3 +28,15 @@ def zad5(dlu):
     tab = np.diag(tab,k=2)
     return tab
 print(zad5(4))
+
+#zad7
+def macierz_2(n):
+    macierz = np.diag([2 for i in range(n)])
+    liczba = 4
+    for i in range(1,n):
+        np.fill_diagonal(macierz[:-i, i:], [liczba for j in range(i)])
+        np.fill_diagonal(macierz[i:, :-i], [liczba for j in range(i)])
+        liczba += 2
+    print(macierz)
+
+macierz_2(5)
