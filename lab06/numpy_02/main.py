@@ -1,7 +1,7 @@
 import numpy as np
 
 #zad1
-a = np.arange(4,84,4)
+a = np.arange(0,81,4,)
 print(a)
 
 #zad2
@@ -29,6 +29,17 @@ def zad5(dlu):
     return tab
 print(zad5(4))
 
+#zad6
+malina = np.array(['malina'])
+mrowka = np.array(['mrowka'])
+armata = np.array(['armata'])
+
+wykreslanka = np.diag(mrowka)
+wykreslanka[:, 0] = mrowka
+wykreslanka[5::,-1] = armata
+#for a in range(6):
+ #   wykreslanka[a,a] = malina[0][a]
+print(wykreslanka)
 #zad7
 def macierz_2(n):
     macierz = np.diag([2 for i in range(n)])
